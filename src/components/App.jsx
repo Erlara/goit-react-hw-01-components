@@ -1,3 +1,12 @@
+import { Profile } from "./Profile";
+import user from '../user.json';
+import { Statistics } from "./Statistics";
+import data from "../data.json";
+import { FriendList } from "./FriendList";
+import friends from "../friends.json";
+import { TransactionHistory } from "./TransactionHistory";
+import transactions from "../transactions.json";
+
 export const App = () => {
   return (
     <div
@@ -10,7 +19,10 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <Profile item={user} />
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />;
     </div>
   );
 };
